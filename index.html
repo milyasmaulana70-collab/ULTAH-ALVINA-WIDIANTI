@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Ulang Tahun, Alvina</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="soundToggle" class="sound-toggle" aria-label="Nyalakan atau matikan musik">
+  <span id="soundIcon">🔇</span>
+</button>
+
+<div class="dots-nav" id="dotsNav"></div>
+
+<!-- ============ LOADING ============ -->
+<section class="sec" id="sec-loading">
+  <div class="loading-wrap">
+    <div class="loading-heart">🤍</div>
+    <div class="loading-label">Menyiapkan sesuatu untukmu</div>
+    <div class="loading-bar"><div class="loading-fill" id="loadingFill"></div></div>
+    <div class="loading-pct" id="loadingPct">0%</div>
+  </div>
+</section>
+
+<!-- ============ WELCOME ============ -->
+<section class="sec" id="sec-welcome">
+  <div class="eyebrow">Dengan penuh cinta</div>
+  <h1 class="title">Ada Sesuatu</h1>
+  <div class="name">untuk kamu</div>
+  <div class="divider"></div>
+  <p class="sub-text">Sebelum lanjut, boleh aku tahu ini beneran kamu?</p>
+  <button class="btn-gold" data-next>Mulai ✨</button>
+</section>
+
+<!-- ============ INPUT NAMA ============ -->
+<section class="sec" id="sec-name">
+  <div class="eyebrow">Konfirmasi</div>
+  <h1 class="title">Siapa Namamu?</h1>
+  <div class="divider"></div>
+  <input type="text" id="nameInput" class="name-input" placeholder="Tulis namamu di sini..." maxlength="30">
+  <button class="btn-gold" id="nameNextBtn">Lanjut</button>
+</section>
+
+<!-- ============ BIRTHDAY ============ -->
+<section class="sec" id="sec-birthday">
+  <div class="eyebrow">Hari ini spesial</div>
+  <h1 class="title">Selamat Ulang Tahun</h1>
+  <div class="name">Alvina Widianti</div>
+  <div class="divider"></div>
+  <div class="age-card">
+    <div class="age-label">Usia sekarang</div>
+    <div class="age-number" id="ageNumber">0</div>
+    <div class="age-suffix">Tahun</div>
+  </div>
+  <p class="sub-text">Geser ke atas untuk lanjut ke hadiahmu 🎁</p>
+</section>
+
+<!-- ============ GIFT ============ -->
+<section class="sec" id="sec-gift">
+  <div class="eyebrow">Khusus untukmu</div>
+  <h1 class="title">Ada Hadiah</h1>
+  <div class="divider"></div>
+  <div class="gift-box" id="giftBox">
+    <div class="gift-lid"></div>
+    <div class="gift-base"></div>
+    <div class="gift-ribbon-v"></div>
+    <div class="gift-ribbon-h"></div>
+  </div>
+  <p class="sub-text" id="giftHint">Ketuk kotaknya untuk membuka</p>
+  <div class="gift-reveal" id="giftReveal">
+    <p>Isinya bukan barang — tapi doa yang tulus untuk setiap langkahmu ke depan. 🤍</p>
+  </div>
+</section>
+
+<!-- ============ PHOTO STORY ============ -->
+<section class="sec" id="sec-photos">
+  <div class="eyebrow">Kenangan</div>
+  <h1 class="title">Cerita Kita</h1>
+  <div class="divider"></div>
+  <div class="carousel" id="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide"><img src="1.jpg" alt="Kenangan Alvina 1"></div>
+      <div class="carousel-slide"><img src="2.jpg" alt="Kenangan Alvina 2"></div>
+      <div class="carousel-slide"><img src="3.jpg" alt="Kenangan Alvina 3"></div>
+      <div class="carousel-slide"><img src="4.jpg" alt="Kenangan Alvina 4"></div>
+      <div class="carousel-slide"><img src="5.jpg" alt="Kenangan Alvina 5"></div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- ============ LETTER ============ -->
+<section class="sec" id="sec-letter">
+  <div class="eyebrow">Sepucuk surat</div>
+  <h1 class="title">Untukmu</h1>
+  <div class="divider"></div>
+  <div class="message">
+    <p id="letterSalutation">Untuk kamu,</p>
+    <p>Dua puluh tahun sudah perjalanan Alvina, dan setiap tahunnya selalu membawa cerita yang layak untuk dirayakan.</p>
+    <p>Semoga di usia yang baru ini, langkahmu semakin mantap, hatimu semakin tenang, dan setiap mimpi yang kamu perjuangkan mendapat jalannya masing-masing.</p>
+    <p>Tetaplah menjadi Alvina yang hangat dan tulus seperti biasanya — dunia terasa lebih baik dengan orang sepertimu di dalamnya.</p>
+    <div class="signoff">Selamat ulang tahun, semoga selalu bahagia.</div>
+  </div>
+</section>
+
+<!-- ============ STARS ============ -->
+<section class="sec" id="sec-stars">
+  <canvas id="starsCanvas"></canvas>
+  <div class="stars-content">
+    <div class="eyebrow">Buat permohonan</div>
+    <h1 class="title">Satu Harapan</h1>
+    <p class="sub-text">Ketuk layar untuk menaburkan bintang harapanmu ✨</p>
+  </div>
+</section>
+
+<!-- ============ ENDING ============ -->
+<section class="sec" id="sec-ending">
+  <div class="eyebrow">Menuju tahun depan</div>
+  <h1 class="title">Sampai Jumpa Lagi</h1>
+  <div class="divider"></div>
+  <div class="countdown-section">
+    <div class="countdown-label">Menuju ulang tahun berikutnya</div>
+    <div class="countdown-grid" id="countdownGrid">
+      <div class="cd-box"><div class="cd-num" id="cdDays">00</div><div class="cd-unit">Hari</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdHours">00</div><div class="cd-unit">Jam</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdMinutes">00</div><div class="cd-unit">Menit</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdSeconds">00</div><div class="cd-unit">Detik</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINISH ============ -->
+<section class="sec" id="sec-finish">
+  <div class="finish-heart">🤍</div>
+  <h1 class="title">Selesai</h1>
+  <div class="divider"></div>
+  <p class="sub-text" id="finishText">Terima kasih sudah membaca sampai akhir.</p>
+  <button class="btn-gold" id="replayBtn">Ulangi ↑</button>
+  <footer>Dibuat dengan hangat untuk Alvina</footer>
+</section>
+
+<audio id="bgMusic" src="music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
